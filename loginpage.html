@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <input type="text" id="input">
+        <button id="submit" onclick="run()">Submit</button>
+        <div id="text"></div>
+        <script>
+            const passwordlist = ["password", "password123", "password1234", "mypassword", "admin", "admin123", "admin1234"]
+            const random = passwordlist[Math.floor(Math.random() * passwordlist.length)]
+            function run(){
+                inputEnter = document.getElementById("input").value
+                win = "passed!"
+                lose = "fail!"
+                if (inputEnter == random){
+                    document.getElementById("text").innerHTML = win
+                } else {
+                     document.getElementById("text").innerHTML = lose
+                }
+            }
+        </script>
+    </body>
+</html>

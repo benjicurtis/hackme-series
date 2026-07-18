@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>targetname = jim@hack.me</h1>
+        <p>username</p>
+        <input type="text" id="input">
+        <p>password</p>
+        <input type="text" id="inputpass">
+        <button id="submit" onclick="run()">Submit</button>
+        <div id="text"></div>
+        <script>
+            function run(){
+                inputEnter = document.getElementById("input").value
+                win = "passed!"
+                lose = "fail!"
+                if (inputEnter == "jim@hack.me' OR 1=1--"){
+                    document.getElementById("text").innerHTML = win
+                } else {
+                     document.getElementById("text").innerHTML = lose
+                }
+            }
+        </script>
+    </body>
+</html>

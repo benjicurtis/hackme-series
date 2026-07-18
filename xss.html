@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <input type="text" id="input">
+        <button id="submit" onclick="run()">Submit</button>
+        <div id="text"></div>
+        <script>
+            function run(){
+                inputEnter = document.getElementById("input").value
+                document.getElementById("text").innerHTML = "you typed: " + inputEnter
+            }
+        </script>
+    </body>
+</html>
