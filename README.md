@@ -1,2 +1,3 @@
 # hackme-series
 try to hack these :)
+this is how you hack but these might not be how the hack works these are just simulations. just look up how they work if you want to know...
