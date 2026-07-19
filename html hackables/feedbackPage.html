@@ -9,7 +9,9 @@
         <div id="text"></div>
         <script>
             feedback = []
-            feedback.append(document.getElementById("feedback").value + document.getElementById("input").value)
+            one = document.getElementById("input").value
+            two = document.getElementById("feedback").value
+            feedback.append(one + two)
             function run(){
                 document.getElementById("text").innerHTML = feedback
             }
