@@ -2,21 +2,16 @@
 <html>
     <body>
         <h1>feedback for:</h1>
-        <input type="text" value="me@hack.er" disabled>
+        <input type="text" value="me@hack.er" id="feedback" disabled>
         <p>what went wrong?</p>
-        <input type="text" id="inputpass">
+        <input type="text" id="input">
         <button id="submit" onclick="run()">Submit</button>
         <div id="text"></div>
         <script>
+            feedback = []
+            feedback.append(document.getElementById("feedback").value + document.getElementById("input").value)
             function run(){
-                inputEnter = document.getElementById("input").value
-                win = "passed!"
-                lose = "fail!"
-                if (inputEnter == "jim@hack.me' OR 1=1--"){
-                    document.getElementById("text").innerHTML = win
-                } else {
-                     document.getElementById("text").innerHTML = lose
-                }
+                document.getElementById("text").innerHTML = feedback
             }
         </script>
     </body>
