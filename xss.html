@@ -1,14 +1,22 @@
 <!DOCTYPE html>
-<html>
-    <body>
-        <input type="text" id="input">
-        <button id="submit" onclick="run()">Submit</button>
-        <div id="text"></div>
-        <script>
-            function run(){
-                inputEnter = document.getElementById("input").value
-                document.getElementById("text").innerHTML = "you typed: " + inputEnter
-            }
-        </script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputField" placeholder="Enter something...">
+    <button id="submitButton">Submit</button>
+    <div id ="output"></div>
+    <script>
+        const inputField = document.getElementById('inputField');
+        const submitButton = document.getElementById('submitButton');
+        const outputDiv = document.getElementById('output');
+        submitButton.addEventListener('click', () => {
+            const userinput = inputField.value;
+            outputDiv.innerHTML = `You entered: ${userinput}`;
+        });
+    </script>
+</body>
 </html>
