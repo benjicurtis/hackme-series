@@ -8,12 +8,10 @@
         <button id="submit" onclick="run()">Submit</button>
         <div id="text"></div>
         <script>
-            feedback = []
             one = document.getElementById("input").value
             two = document.getElementById("feedback").value
-            feedback.append(one + two)
             function run(){
-                document.getElementById("text").innerHTML = feedback
+                document.getElementById("text").innerHTML = one + two
             }
         </script>
     </body>
