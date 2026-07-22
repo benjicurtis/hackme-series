@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Feedback From:</h1>
+        <input type="text" value="hecker" id="feedback" disabled>
+        <p>what went wrong?</p>
+        <input type="text" id="input">
+        <button id="submit" onclick="run()">Submit</button>
+        <div id="text"></div>
+        <button id="return" onclick="window.location.href='site.html'">Return to Home</button>
+        <script>
+            if (localStorage.getItem("loggedInUser") == "admin"){
+                document.getElementById("feedback").value = "Jonas Spencer"
+            } else {
+                document.getElementById("feedback").value = localStorage.getItem("loggedInUser")
+            }
+            let feedbacklist = localStorage.getItem("feedbacklist") || "";
+            function run(){
+                one = document.getElementById("input").value
+                two = document.getElementById("feedback").value
+                feedbacklist += "<p>" + two + " says: " + one + "</p>";
+                localStorage.setItem("feedbacklist", feedbacklist);
+                document.getElementById("text").innerHTML = two + ": " + one
+            }
+        </script>
+    </body>
+</html>
