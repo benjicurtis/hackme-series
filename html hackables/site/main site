@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Impact of Tech on the Environment</title>
+    <style>
+      @font-face {
+        font-family: "SFMono";
+        src:
+          url("fonts/sf-mono-regular.woff2") format("woff2"),
+          url("fonts/sf-mono-regular.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      html {
+        color-scheme: dark;
+      }
+
+      body {
+        background-color: #000 !important;
+        color: #0f0 !important;
+        border: 2px solid #0f0;
+        font-family: "SFMono", monospace;
+        margin: 20px;
+        overflow-wrap: break-word;
+        white-space: normal;
+        padding: 10px;
+      }
+
+      .box {
+        background-color: #000 !important;
+        color: #0f0 !important;
+        border: 2px solid #0f0;
+        font-family: "SFMono", monospace;
+        margin: 20px;
+        overflow-wrap: break-word;
+        white-space: normal;
+        padding: 20px;
+        flex: 1;
+      }
+
+      h1,
+      h3 {
+        color: #0f0 !important;
+        font-family: "SFMono", monospace;
+      }
+    </style>
+  </head>
+  <body>
+
+    <button
+      style="background-color: #000; color: #0f0; border: 2px solid #0f0; font-family: SFMono, monospace; padding: 10px; margin-bottom: 20px"
+      onclick="window.location.href='loginPage.html'">
+      <p id="user"></p>
+    </button>
+    <button
+      style="background-color: #000; color: #0f0; border: 2px solid #0f0; font-family: SFMono, monospace; padding: 10px; margin-bottom: 20px"
+      onclick="window.location.href='feedbackPage.html'">
+      Give Feedback
+    </button>
+    <div id="admintext"></div>
+    <h1>The Impacts of Tech on the Environment</h1>
+    <h3>
+      "We want to educate people on the impact of tech on the environment"
+    </h3>
+    This is our mission statement. We want to spread this message to people to
+    spread our campaign to stop E-waste
+    <div style="display: flex; width: 100%">
+      <div class="box" style="min-height: 200px">
+        The Problem: The mining for the resources to make electronics effects
+        the environment because it costs a lot of earth resources. It also
+        causes ground water contamination.
+      </div>
+      <div class="box" style="min-height: 200px">
+        The Solution: We are going to educate people so they are more conscious
+        about buying unnecessary tech. We belive this will work because they
+        will be educated about the problems caused.
+      </div>
+    </div>
+    <script>
+      let user = localStorage.getItem("loggedInUser");
+      if (user) {
+        document.getElementById("user").innerHTML = "Logged in as: " + user;
+        if (user === "admin") {
+          document.getElementById("admintext").innerHTML =
+            "<p style='color: #0f0; font-family: SFMono, monospace;'>You are logged in as admin. You can access the admin page <a href='admin.html' style='color: #0f0;'>here</a>.</p>";
+        }
+      } else {
+        document.getElementById("user").innerHTML = "Not logged in";
+      }
+      function checkGuess() {
+        if (guess === "Jonas Spencer") {
+          alert("Correct! You win the reward.");
+        } else {
+          alert("Incorrect guess.");
+        }
+      }
+    </script>
+    <p>Enter your guess of the name of the admin here for a 3,000,000 cash reward (case sensitive)</p>
+    <input type="text" id="nameguess" placeholder="Enter your guess">
+    <button id="guessbutton" onclick="checkGuess()">Submit Guess</button>
+  </body>
+</html>
